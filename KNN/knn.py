@@ -19,6 +19,17 @@ def custom_train_test(features, labels, train_size=0.8):
 
     return x_train, x_test, y_train, y_test
 
+def predict_customer(customer, x_train, y_train, k):
+    diff = customer - x_train
+
+    distances = np.sqrt(np.sum(diff**2, axis=1))
+
+    nearest_neighbor_indices = np.argsort(distances)[:k]
+
+    neighbor_labels = y_train[nearest_neighbor_indices]
+
+    return 1 if np.sum(neighbor_labels) > (k/2) else 0
+
 
 df = pd.read_csv("customer_segmentation_data.csv")
 

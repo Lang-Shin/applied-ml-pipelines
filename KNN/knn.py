@@ -9,8 +9,7 @@ def custom_train_test(features, labels, train_size=0.8):
 
     np.random.shuffle(indices)
 
-    split_point = (indices*train_size)
-
+    split_point = (n*train_size)
     train_data_id = indices[:int(split_point)]
     test_data_id = indices[int(split_point):]
 
@@ -38,7 +37,15 @@ data_arr = df.values
 features = data_arr[:, :-1]
 labels = data_arr[:,-1]
 
-print(df)
+custom_train_test(features, labels)
 
-print(features)
-print(labels)
+x_train, x_test, y_train, y_test = custom_train_test(features, labels)
+customer = x_test[0]
+customer_label = y_test[0]
+
+print("\n\n",df)
+
+prediction = predict_customer(customer, x_train, y_train, 5)
+
+print(prediction)
+print(customer_label)

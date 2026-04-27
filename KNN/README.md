@@ -24,7 +24,7 @@ The model successfully classifies test points by analyzing their proximity to kn
 **Visualization:**
 The graph below depicts the training clusters (Blue: Class 0, Orange: Class 1) and the test customer (Red Star) being classified.
 
-<img src="KNN/imgs/plot.png">
+<img src="imgs/plot.png">
 
 **Prediction Accuracy:**
 * **Prediction:** 1

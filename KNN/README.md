@@ -1,6 +1,6 @@
 # Customer Segmentation Analysis: From Scratch
 
-This project implements **K-Nearest Neighbors (K-NN)** for classification and explores the dataset structure using manual implementations (without using Scikit-Learn). It is designed to demonstrate an understanding of distance-based machine learning algorithms and data visualization.
+This activity implements **K-Nearest Neighbors (K-NN)** for classification and explores the dataset structure using manual implementations.
 
 ## Project Overview
 * **Goal:** Classify customers into segments (0 or 1) based on their `Annual_Income_k` and `Spending_Score`.

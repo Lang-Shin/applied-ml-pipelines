@@ -37,7 +37,7 @@ prediction = predict_customer(customer, x_train, y_train, 5)
 print(f"Prediction: {prediction}")
 print(f"Actual Label: {customer_label}")
 
-# --- NEW: VISUALIZATION SECTION ---
+#Visualization
 plt.figure(figsize=(10, 6))
 
 # Plot training data by label

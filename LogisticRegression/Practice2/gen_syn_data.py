@@ -37,7 +37,7 @@ log_odds = (
 )
 
 prob = 1 / (1 + np.exp(-log_odds))
-target = np.where(prob > np.uniform(0, 1, size=n), 1, 0)
+target = np.where(prob > np.random.uniform(0, 1, size=n), 1, 0)
 
 # Create DataFrame
 df = pd.DataFrame({
@@ -51,6 +51,6 @@ df = pd.DataFrame({
 })
 
 # Save to CSV
-df.to_csv("LogisticRegression/Practice2/cardio_risk_dataset.csv")
+df.to_csv("LogisticRegression/Practice2/cardio_risk_dataset.csv", index=False)
 
 print(f"\n\nDataset generated successfully\nRows : {df.shape[0]}\tColumns : {df.shape[1]}")

@@ -35,6 +35,6 @@ df = pd.DataFrame({
     "Premium_User" : premium
 })
 
-df.to_csv("LogisticRegression/Practice3/user_desc.csv")
+df.to_csv("LogisticRegression/Practice3/user_desc.csv", index=False)
 
 print(f"\nData generated successfully\nRows : {df.shape[0]}\tColumns : {df.shape[1]}")
